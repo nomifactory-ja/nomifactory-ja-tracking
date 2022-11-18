@@ -43,7 +43,7 @@ const vegaSpec = compile(spec, { config }).spec;
 
 const view = new View(parse(vegaSpec)).renderer("none").finalize();
 view
-  .toCanvas(2)
+  .toCanvas(3)
   .then(function (canvas) {
     // process node-canvas instance for example, generate a PNG stream to write var
     // stream = canvas.createPNGStream();
