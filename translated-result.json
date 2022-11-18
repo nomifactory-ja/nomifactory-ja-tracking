@@ -28,5 +28,40 @@
     "createdAt": "2022/11/18 21:57:49",
     "translatedCount": 29,
     "allCount": 650
+  },
+  {
+    "createdAt": "2022/11/18 22:18:37",
+    "allCount": 650,
+    "translatedCount": 29,
+    "titleTranslatedCount": 24,
+    "descTranslatedCount": 29
+  },
+  {
+    "createdAt": "2022/11/18 23:06:19",
+    "allCount": 650,
+    "translatedCount": 29,
+    "titleTranslatedCount": 24,
+    "descTranslatedCount": 29
+  },
+  {
+    "createdAt": "2022/11/19 0:06:09",
+    "allCount": 650,
+    "translatedCount": 29,
+    "titleTranslatedCount": 24,
+    "descTranslatedCount": 29
+  },
+  {
+    "createdAt": "2022/11/19 1:06:32",
+    "allCount": 650,
+    "translatedCount": 29,
+    "titleTranslatedCount": 24,
+    "descTranslatedCount": 29
+  },
+  {
+    "createdAt": "2022/11/19 2:06:55",
+    "allCount": 650,
+    "translatedCount": 35,
+    "titleTranslatedCount": 30,
+    "descTranslatedCount": 35
   }
 ]
