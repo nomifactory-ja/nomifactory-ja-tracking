@@ -38,6 +38,30 @@ const langData: ILangData = valuableLines.reduce((acc, line) => {
   return acc;
 }, {} as ILangData);
 
+const titleTranslatedCount = Object.entries(langData).reduce(
+  (acc, [, value]) => {
+    const tilteHasJapanese = filterASCII(value.title).length > 0;
+
+    if (tilteHasJapanese) {
+      acc++;
+    }
+    return acc;
+  },
+  0
+);
+
+const descTranslatedCount = Object.entries(langData).reduce(
+  (acc, [, value]) => {
+    const descHasJapanese = filterASCII(value.desc).length > 0;
+
+    if (descHasJapanese) {
+      acc++;
+    }
+    return acc;
+  },
+  0
+);
+
 const translatedCount = Object.entries(langData).reduce((acc, [, value]) => {
   const tilteHasJapanese = filterASCII(value.title).length > 0;
   const descHasJapanese = filterASCII(value.desc).length > 0;
@@ -48,7 +72,20 @@ const translatedCount = Object.entries(langData).reduce((acc, [, value]) => {
   return acc;
 }, 0);
 
-const result = { translatedCount, allCount: Object.keys(langData).length };
+export interface ResultData {
+  createdAt: string;
+  allCount: number;
+  translatedCount: number;
+  titleTranslatedCount: number;
+  descTranslatedCount: number;
+}
+
+const result = {
+  allCount: Object.keys(langData).length,
+  translatedCount,
+  titleTranslatedCount,
+  descTranslatedCount,
+};
 console.log(result);
 
 import * as fs from "fs/promises";
@@ -61,7 +98,7 @@ const translatedResult = (
   isTranslatedResultFileExists
     ? JSON.parse(await fs.readFile(translatedResultFileName, "utf-8"))
     : []
-) as { createdAt: string; translatedCount: number; allCount: number }[];
+) as ResultData[];
 
 const currentDate = new Date().toLocaleString("ja-JP", { timeZone: "JST" });
 translatedResult.push({

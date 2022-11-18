@@ -1,8 +1,10 @@
 declare module "*/translated-result.json" {
   interface ResultData {
     createdAt: string;
-    translatedCount: number;
     allCount: number;
+    translatedCount: number;
+    titleTranslatedCount: number;
+    descTranslatedCount: number;
   }
 
   const value: ResultData[];

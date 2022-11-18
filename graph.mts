@@ -9,7 +9,8 @@ const spec: TopLevelSpec = {
     values,
   },
   repeat: {
-    layer: ["translatedCount", "allCount"],
+    // layer: ["translatedCount", "allCount"],
+    layer: ["translatedCount"], // ゴール遠すぎるので一旦非表示
   },
   spec: {
     mark: "line",
