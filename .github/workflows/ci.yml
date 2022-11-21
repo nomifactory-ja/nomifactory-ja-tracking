@@ -10,7 +10,7 @@ on:
 
 jobs:
   gnu:
-    name: Check progression of naari3/nomifactory-ja
+    name: Check progression of nomifactory-ja/nomifactory-ja
     runs-on: ubuntu-latest
     steps:
     - name: Checkout repo

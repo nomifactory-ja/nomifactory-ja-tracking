@@ -17,7 +17,7 @@ interface ILangData {
 }
 
 const data = await fetch(
-  "https://raw.githubusercontent.com/naari3/nomifactory-ja/main/src/assets/questbook/lang/en_us.lang"
+  "https://raw.githubusercontent.com/nomifactory-ja/nomifactory-ja/main/src/assets/questbook/lang/en_us.lang"
 );
 const text = await data.text();
 const valuableLines = text
