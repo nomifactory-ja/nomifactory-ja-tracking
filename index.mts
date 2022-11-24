@@ -66,7 +66,7 @@ const translatedCount = Object.entries(langData).reduce((acc, [, value]) => {
   const tilteHasJapanese = filterASCII(value.title).length > 0;
   const descHasJapanese = filterASCII(value.desc).length > 0;
 
-  if (tilteHasJapanese || (!tilteHasJapanese && descHasJapanese)) {
+  if (tilteHasJapanese && descHasJapanese) {
     acc++;
   }
   return acc;
